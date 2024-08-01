@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarigai-MangaStore</title>
+    <link rel="icon" href="src/assets/logos/Yarigai.ico">
+    <link rel="stylesheet" href="src/styles/headerFooter.css">
+    <link rel="stylesheet" href="src/styles/index.css">
+    <script src="https://kit.fontawesome.com/ea55bac2b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body translate="no">
+    <header class="header">
+        <div class="cart">
+            <button onclick="location.href='src/pages/cart.html'">
+                <img src="src/assets/icons/cartShopping.svg" alt="">
+                <span id="cart-count" class="cart-count">0</span>
+            </button>
+        </div>
+
+        <div class="tittle-logo">
+            <img src="./src/assets/logos/Yarigai.png" alt="Logo" onclick="location.href='index.html'">
+            <h2 onclick="location.href='index.html'">Yarigai-MangaStore</h2>
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="dropdown-menu" id="menuIconDesp">
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item"><a href="index.html">Home</a></li>
+                    <li class="menu-item"><a href="src/pages/catalog.html">Catalog</a></li>
+                    <li class="menu-item"><a href="src/pages/registerClient.html">Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <div class="asidesContainer">
+            <div class="asideLeft">
+
+                <div class="container">
+
+                    <div id="info"></div>
+
+                    <div id="text1" class="text">
+                        <h3>Description</h3>
+                        <p>Hey, here you can find some things that can be interesting for you, check more here down.</p>
+                    </div>
+
+                    <div id="text2" class="text">
+                        <h3>You can't find the mangas that you're searching?</h3>
+                        <p>Hither is a variety of mangas that can be what you need, explore more in the catalog</p>
+                    </div>
+
+                    <div id="text3" class="text">
+                        <h3>Did you Sing Up already?</h3>
+                        <p>For now we have a limited categories of mangas, but new things are going to arrive, don't lose new offers and products, what are you waiting for?</p>
+                    </div>
+
+                    <div class="left" onclick="left()">
+                        <img src="./src/assets/icons/arrowLeft.svg" alt="">
+                    </div>
+                    <div class="right" onclick="right()">
+                        <img src="./src/assets/icons/arrowRight.svg" alt="">
+                    </div>
+
+                    <div class="dots">
+                        <div class="dot a1"></div>
+                        <div class="dot a2"></div>
+                        <div class="dot a3"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="asideRight">
+                <div class="images-decoration">
+                    <img src="src/assets/indexDecoration/img01.jpg" alt="indexDecoration1">
+                    <img src="src/assets/indexDecoration/img02.jpg" alt="indexDecoration2">
+                    <img src="src/assets/indexDecoration/img03.jpg" alt="indexDecoration3">
+                    <img src="src/assets/indexDecoration/img04.jpg" alt="indexDecoration4">
+                </div>
+            </div>
+        </div>
+
+        <div class="mangas">
+            <h2>Mangas</h2>
+            <p>Here you can find all our available manga. If you're looking for a specific genre, you can go to the catalog located at the top of the page.</p>
+
+            <div class="portadas-mangas">
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolAnother/vol1.jpg" alt="AnotherVol1" onclick="window.location.href = 'src/pages/catalog.html#Another'">
+                    <div class="manga-info">
+                        <h2>Another</h2>
+                        <p>In 1972, a popular and charismatic student named Misaki Yomiyama belonging to class 3-3 of Yomiyama North School, died suddenly in the middle of the school year. Devastated by the loss, his classmates and teacher acted as if Misaki was still alive and even reserved a place for him at the graduation ceremony. What was even more telling was that Misaki appeared in the graduation photo.</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#Another'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolAttOnTitan/vol01.jpg" alt="AttOnTitanVol1" onclick="window.location.href = 'src/pages/catalog.html#AttackOnTitan'">
+                    <div class="manga-info">
+                        <h2>Attack on Titan</h2>
+                        <p>The story takes place in a fictional world in which humanity is on the brink of extinction due to humanoid creatures called "titans", forcing the survivors to take refuge in three enormous walls that prevent access to these monsters.</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#AttackOnTitan'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolBunnnyGirlSenpai/vol1.jpg" alt="BunnnyGirlSenpaiVol1" onclick="window.location.href = 'src/pages/catalog.html#BunnyGirlSenpai'">
+                    <div class="manga-info">
+                        <h2>Bunny girl senpai</h2>
+                        <p>High school student Sakuta Azusagawa's life takes an unexpected turn when he meets teenage actress Mai Sakurajima, dressed as a bunny girl, wandering around a library and no one else notices. Mai is intrigued because Sakuta is the only one who can see her, since other people can't see her, even when she dresses normally or tries to stay away from the celebrity life. Calling this phenomenon "Adolescence Syndrome"
+                        </p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#BunnyGirlSenpai'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="./src/assets/mangas/VolCorpseParty/vol1.jpg" alt="CorpsePartyVol1" onclick="window.location.href = 'src/pages/catalog.html#CorpseParty'">
+                    <div class="manga-info">
+                        <h2>Corpse Party</h2>
+                        <p>Based on the video game of the same name, Corpse Party: Tortured Souls follows the main story of five students who find themselves transported to a mysterious institute inhabited by numerous ghosts who want to end their lives.</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#CorpseParty'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolDeathNote/vol1.jpg" alt="DeathNoteVol1" onclick="window.location.href = 'src/pages/catalog.html#DeathNote'">
+                    <div class="manga-info">
+                        <h2>Death Note</h2>
+                        <p>Light Yagami, a dedicated model student, is extremely bored. But when he finds a mysterious notebook, infinite possibilities open up before him: with the power of life or death of his fellow men in his hands, which path will he choose? Help or create a world where he is the overlord?</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#DeathNote'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolFruitsBasket/vol1.jpg" alt="FruitsBasketVol1" onclick="window.location.href = 'src/pages/catalog.html#FruitsBasket'">
+                    <div class="manga-info">
+                        <h2>Fruits Basket</h2>
+                        <p>It tells the story of young Tooru, an orphan student who lives in a tent. Tooru's strong and determined character makes him live day to day with resolution.</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#FruitsBasket'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolHellGirl/vol1.jpg" alt="HellGirlVol1" onclick="window.location.href = 'src/pages/catalog.html#HellGirl'">
+                    <div class="manga-info">
+                        <h2>Hell Girl</h2>
+                        <p>It tells the story of a little girl who is abandoned by her parents for being born with malformations, the girl tries to return to them.</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#HellGirl'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolJJKaisen/vol01.jpg" alt="JJKaisenVol1" onclick="window.location.href = 'src/pages/catalog.html#JJKaisen'">
+                    <div class="manga-info">
+                        <h2>Jujutsu Kaisen</h2>
+                        <p>The story revolves around student Yūji Itadori, who joins a secret organization of sorcerers to kill a powerful curse called Ryomen Sukuna after becoming its host.</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#JJKaisen'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolLovelyComplex/vol1.jpg" alt="LovelyComplexVol1" onclick="window.location.href = 'src/pages/catalog.html#LovelyComplex'">
+                    <div class="manga-info">
+                        <h2>Lovely Complex</h2>
+                        <p>This shojo manga is a love story different from all the others you know; a story about why differences are important, but also about the willpower necessary to overcome complexes.</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#LovelyComplex'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolNaruto/vol01.jpg" alt="NarutoVol1" onclick="window.location.href = 'src/pages/catalog.html#Naruto'">
+                    <div class="manga-info">
+                        <h2>Naturo</h2>
+                        <p>The work tells the story of a teenage ninja named Naruto Uzumaki, who aspires to become Hokage, leader of his village, with the purpose of being recognized as someone important within the village and among his peers. Discover these great adventures in their manga version.</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#Naruto'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolNeonGenesisEvangelion/vol1.jpg" alt="NeonGenesisEvangelionVol1" onclick="window.location.href = 'src/pages/catalog.html#NeonGenesisEvangelion'">
+                    <div class="manga-info">
+                        <h2>Neon Genesis Evangelion</h2>
+                        <p>Evangelion es una serie “de robots” donde los robots enemigos son lo menos importante pero que a la vez hacen avanzar la trama. Evangelion mezcla escenas de acción con diálogos de categoría, crípticos, apelando a Dios y al derecho de crear una nueva Humanidad.</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#NeonGenesisEvangelion'">Show more</button>
+                    </div>
+                </div>
+
+                <div class="manga-item">
+                    <img src="src/assets/mangas/VolYakuzaLover/vol1.jpg" alt="YakuzaLoverVol1" onclick="window.location.href = 'src/pages/catalog.html#YakuzaLover'">
+                    <div class="manga-info">
+                        <h2>Yakuza Lover</h2>
+                        <p>When a feisty college girl falls for a yakuza boss, she gets swept into a steamy and dangerous love affair.</p>
+                        <button onclick="window.location.href = 'src/pages/catalog.html#YakuzaLover'">Show more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="contact-me">
+                <p>Contact Us</p>
+                <div class="contenedor-redes-sociales">
+                    <a class="facebook" href="#">
+                        <span class="cuadrado">
+                            <img src="./src/assets/icons/facebook.svg" alt="facebook">
+                        </span>
+                        <span class="titulo">Facebook</span>
+                    </a>
+                    <a class="gplus" href="#">
+                        <span class="cuadrado">
+                            <img src="./src/assets/icons/e-mail.svg" alt="e-mail">
+                        </span>
+                        <span class="titulo">E-mail</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <h2>Sign up to receive emails</h2>
+                <p>Sign up to stay informed about all the news on the website!</p>
+
+                <form action="mailto:tu_correo_electronico@gmail.com" method="post" enctype="text/plain">
+                    <input type="email" id="email" name="email" class="newsletter-input" placeholder="Email" required>
+                    <button type="submit">subscribe</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-copy">
+            <p>Copyright &copy;Yarigai-MangaStore.
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">cookies</a>
+                <a href="#">AdChoice</a>
+            </p>
+        </div>
+
+    </footer>
+    <script src="src/scripts/index.js"></script>
+    <script src="src/scripts/indexMenu.js"></script>
+</body>
+
+</html>

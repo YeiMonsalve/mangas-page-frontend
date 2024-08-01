@@ -1,0 +1,243 @@
+.asidesContainer {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(to right, #A8BDCC 50%, #fff 50%);
+}
+
+.asideLeft,
+.asideRight {
+    position: relative;
+    flex: 1;
+}
+
+.asideLeft {
+    transform: skew(-10deg);
+    background-color: #A8BDCC;
+}
+
+.asideRight {
+    transform: skew(-10deg);
+    background-color: #fff;
+}
+
+.container {
+    position: relative;
+    width: 40vw;
+    height: 45vh;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    transform: skew(10deg);
+}
+
+.text {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: .7s ease-in-out;
+}
+
+.text h3 {
+    color: #1E2D5E;
+    font-size: 2rem;
+
+}
+
+.right img {
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 1s;
+    right: 10px;
+    top: 0;
+}
+
+.left img {
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 1s;
+    left: 10px;
+    top: 0;
+}
+
+.dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    transform: translateY(-50%);
+    bottom: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s;
+    background: #1E2D5E;
+}
+
+.dot.a1 {
+    margin-left: 0;
+}
+
+.dot.a2 {
+    margin-left: -20px;
+}
+
+.dot.a3 {
+    margin-left: 20px;
+}
+
+.dot.a1:hover,
+.dot.a2:hover,
+.dot.a3:hover {
+    background: #86ADC7;
+}
+
+.images-decoration {
+    display: flex;
+    height: 45vh;
+    align-items: center;
+    gap: 2vw;
+    margin-left: 3vw;
+}
+
+.images-decoration img {
+    transform: rotate(22deg);
+    width: 9vw;
+}
+
+.mangas {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mangas h2 {
+    font-size: 1.7rem;
+}
+
+.mangas p {
+    font-size: 1.2rem;
+}
+
+.portadas-mangas {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    gap: 20px;
+}
+
+.manga-item {
+    display: flex;
+    box-sizing: border-box;
+    max-width: 47%;
+    margin: 1vw;
+}
+
+.manga-item img {
+    width: 220px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.manga-info {
+    text-align: center;
+    background-color: #A8BDCC7C;
+}
+
+.manga-info p {
+    margin: 0 20px;
+}
+
+.manga-item button {
+    font-size: 1.1rem;
+    padding: 7px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #6A93AA9F;
+}
+
+@media only screen and (max-width: 1050px) {
+    .manga-item {
+        max-width: 100vw;
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .asidesContainer {
+        flex-direction: column;
+        height: 720px;
+    }
+
+    .asideLeft,
+    .asideRight {
+        transform: skew(0);
+    }
+
+    .container {
+        transform: skew(0);
+        width: 95%;
+    }
+
+    .text {
+        width: 70vw;
+        height: 35vh;
+    }
+
+    .images-decoration {
+        height: auto;
+        margin: 30px 0 0 30px;
+    }
+
+    .images-decoration img {
+        width: 20.4vw;
+    }
+
+    .asidesContainer {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .manga-item {
+        display: inline-block;
+        text-align: center;
+        border: 2px solid #A8BDCC7C;
+    }
+
+    .manga-item img {
+        margin: 20px 0 0 0;
+    }
+
+    .container {
+        margin-left: 10px;
+    }
+
+    .text {
+        width: 65vw;
+        height: 47vh;
+    }
+
+    .cart {
+        order: 2;
+    }
+}

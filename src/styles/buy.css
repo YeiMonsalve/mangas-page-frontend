@@ -1,0 +1,158 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Encabezado */
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo y título del encabezado */
+.tittle-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tittle-logo img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.tittle-logo img:hover {
+    transform: scale(1.4);
+}
+
+.tittle-logo h2 {
+    color: #246A73;
+    font-style: oblique;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.tittle-logo h2:hover {
+    transform: scale(1.2);
+}
+
+/* Contenido principal */
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.manga-info {
+    display: flex;
+    align-items: center;
+}
+
+.manga-image {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.manga-image img {
+    width: 160px;
+    height: auto;
+}
+
+.manga-details {
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #246A73;
+}
+
+/* Formulario */
+form {
+    margin-top: 20px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.buyProduct {
+    text-decoration: none;
+    width: 100%;
+    margin: 10px;
+    background-color: #6a93aa9f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    margin: 10px;
+    background-color: #6a93aa9f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #246A73;
+}
+
+@media only screen and (max-width: 410px) {
+    .manga-info {
+        flex-direction: column;
+    }
+
+    .manga-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

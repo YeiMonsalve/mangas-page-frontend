@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+.cart button {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+.cart img {
+    width: 30px;
+}
+
+.cart-count {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #246A73;
+}
+
+.tittle-logo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tittle-logo img {
+    width: 100px;
+}
+
+.tittle-logo h2 {
+    font-size: 2rem;
+    font-style: oblique;
+    color: #246A73;
+}
+
+.dropdown-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked~.dropdown-menu {
+    transform: scaleY(1);
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    list-style: none;
+}
+
+
+.menu-item a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #246A73;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* height: 23vh; */
+    align-items: center;
+    background-color: #fff;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 300px;
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #1E2D5E;
+}
+
+.facebook img {
+    width: 10px;
+}
+
+.gplus img {
+    width: 15px;
+}
+
+.contenedor-redes-sociales a {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    margin:5px;
+}
+
+.contenedor-redes-sociales a span.cuadrado {
+    line-height: 30px;
+    width: 30px;
+}
+
+.contenedor-redes-sociales a span.titulo {
+    margin: 0 20px;
+    font-size: 1.1rem;
+    transition: all 200ms linear;
+}
+
+.contenedor-redes-sociales a:hover span.titulo {
+    color: #fff;
+}
+
+.contenedor-redes-sociales .facebook:hover,
+.contenedor-redes-sociales .gplus:hover {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.contenedor-redes-sociales .facebook {
+    border: 2px solid #3B5998;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.contenedor-redes-sociales .facebook:hover,
+.contenedor-redes-sociales .facebook span.cuadrado {
+    background: #3b5998;
+}
+
+.contenedor-redes-sociales .facebook span.titulo {
+    color: #3b5998;
+}
+
+.contenedor-redes-sociales .gplus {
+    border: 2px solid #d64136;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.contenedor-redes-sociales .gplus:hover,
+.contenedor-redes-sociales .gplus span.cuadrado {
+    background: #d64136;
+}
+
+.contenedor-redes-sociales .gplus span.titulo {
+    color: #d64136;
+}
+
+.newsletter {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.newsletter h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1E2D5E;
+}
+
+.newsletter p {
+    margin: 3px 0 4px;
+}
+
+
+form input {
+    margin: 10px;
+    font-size: 1rem;
+}
+
+form button {
+    font-size: 1rem;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #6A93AA9F;
+}
+
+.footer-copy {
+    color: #1E2D5E;
+}
+
+.footer-copy a {
+    color: #465F85;
+}
+
+@media only screen and (max-width: 730px) {
+    .footer-content {
+        display: inline-block;
+    }
+
+    .newsletter p {
+        text-align: center;
+    }
+
+    .newsletter h2 {
+        text-align: center;
+    }
+
+    .footer-copy {
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+} 
+
+@media only screen and (max-width: 500px) {
+    .dropdown-menu {
+        position: absolute;
+        z-index: 1;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .menu {
+        margin: 0px;
+        padding: 4% 40% 4% 40%;
+        background-color: #fff;
+    }
+
+    .menu-icon {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 20px;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #246A73;
+    }
+}

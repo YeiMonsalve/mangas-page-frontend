@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yarigai-MangaStore</title>
+  <link rel="icon" href="../assets/logos/Yarigai.ico">
+  <link rel="stylesheet" href="../styles/catalog.css">
+  <link rel="stylesheet" href="../styles/headerFooter.css">
+  <script src="https://kit.fontawesome.com/ea55bac2b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body translate="no">
+  <header class="header">
+
+    <div class="cart">
+      <button onclick="location.href='cart.html'">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </div>
+
+    <div class="tittle-logo">
+      <img src="../assets/logos/Yarigai.png" alt="Logo" onclick="location.href='../../index.html'">
+      <h2 onclick="location.href='../../index.html'">Yarigai-MangaStore</h2>
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <div class="dropdown-menu">
+      <nav>
+        <ul class="menu">
+          <li class="menu-item"><a href="../../index.html">Home</a></li>
+          <li class="menu-item"><a href="catalog.html">Catalog</a></li>
+          <li class="menu-item"><a href="registerClient.html">Log in</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <div class="search-container">
+      <select id="category-select" onchange="filtrarMangas()">
+        <option value="todos">All</option>
+        <option value="accion">Action</option>
+        <option value="romance">Romance</option>
+        <option value="terror-suspenso">Horror/Thriller</option>
+      </select>
+      <input type="text" id="search-input" placeholder="Search...">
+      <button class="buscar" onclick="searchManga()">Search</button>
+    </div>
+
+    <div class="mangas">
+      <div class="portadas-mangas">
+
+        <div class="manga-item" id="Another" data-categoria="terror-suspenso">
+          <img src="../assets/mangas/VolAnother/vol1.jpg" alt="">
+          <div class="manga-info">
+            <h2>Another (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">In 1972, a popular and charismatic student named Misaki Yomiyama belonging to class 3-3 of Yomiyama North School, died suddenly in the middle of the school year. Devastated by the loss, his classmates and teacher acted as if Misaki was still alive and even reserved a place for him at the graduation ceremony. What was even more telling was that Misaki appeared in the graduation photo.</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolAnother/vol2.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">In the spring of 1998, a 15-year-old boy named Koichi Sakakibara is transferred to that same class, there he meets Mei Misaki, a rather strange girl who is ignored by both his teachers and classmates. Unexpectedly, a series of murders causes despair among the students of class 3-3. Koichi and Mei discover that these deaths are related to Misaki's in 1972 and set out to discover what causes them and how to stop them before they become the next victims.</p>
+                <span class="price">140.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolAnother/vol3.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">The phenomenon of class 3-3 takes on new proportions with the revelations of Mr. Chibiki, who tells Koichi and Mei details of the curse that occurred in other years at Yomikita High School. The pressure increases and the situation becomes unbearable for some. The deaths continue despite those who “don't exist,” but a clue leads Sakakibara and his colleagues to hope to stop the curse. After all... who is the dead man?</p>
+                <span class="price">111.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolAnother/vol4.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">In a school in the city of Yomiyama, he plans a curse linked to the past: it all began when Misaki, very popular among his classmates, lost his life in an accident, but his death was not accepted by either the teachers or the students. , who continued to pretend that nothing had happened. Twenty-six years later, history seems to repeat itself when some of the school's students die one after another, under mysterious conditions. Apparently the only way to escape the curse is for one of the students to become "non-existent"...</p>
+                <span class="price">200.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$125.999</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now-button">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="AttackOnTitan" data-categoria="accion">
+          <img src="../assets/mangas/VolAttOnTitan/vol01.jpg" alt=""></img>
+          <div class="manga-info">
+            <h2>Attack on Titan (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">This is a world controlled by the titans... Humanity, turned into food for giants, has built gigantic walls, and paid for being able to avoid attacks with their freedom. However, the appearance of the great giant destroys the symbolic peace that had been achieved, and provokes the start of a hopeless war.</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolAttOnTitan/vol02.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">A mysterious titan appears out of nowhere and attacks its fellow humans, apparently protecting humans. What's going on?! No one knows for sure what the origin of these mysterious creatures is, but... could it be possible to have one on the side of humanity?</p>
+                <span class="price">70.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolAttOnTitan/vol03.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">It is no longer a secret that Eren can become a Titan, but Armin convinces his superiors not to kill him, but rather to use him to reseal the wall. But Eren's control over his alter ego is not complete and tends to get out of control...</p>
+                <span class="price">75.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolAttOnTitan/vol04.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">A risky tactic is developed - bringing Eren in his Titan form to attempt to repair the Rose Wall, thus reclaiming human territory from the monsters for the first time in a century. But Eren's self-control is far from perfect, and when he gets out of control, not even Armin can stop him! With the survival of humanity on his enormous shoulders, will Eren be able to return to his senses, or will he be lost forever?</p>
+                <span class="price">72.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$105.000</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now-button">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="BunnyGirlSenpai" data-categoria="romance">
+          <img src="../assets/mangas/VolBunnnyGirlSenpai/vol1.jpg" alt="">
+          <div class="manga-info">
+            <h2>Bunny girl senpai (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">Bunnies don't live in libraries. This is simply common sense. However, that's exactly where Sakuta Azusagawa encounters one in the wild. More puzzling is who the bunny is: Mai Sakurajima, a senior and well-known actress currently taking a break from working in the industry.</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolBunnnyGirlSenpai/vol2.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">One day, Sakuta Azusagawa meets a bunny girl in the library... This bunny girl is none other than Mai Sakurajima, a famous actress. Sakuta does everything he can to help Mai, who is affected by a strange phenomenon called "puberty syndrome", but the situation worsens.</p>
+                <span class="price">20.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolBunnnyGirlSenpai/vol3.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">Sakuta may have cured Mai's Puberty Syndrome at the last minute, but now he faces a no less heartbreaking task: convincing her to officially date him.</p>
+                <span class="price">25.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolBunnnyGirlSenpai/vol3.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">After you make it through that moment, you get a well-deserved rest... only to wake up "yesterday", with all your progress reset. This inexplicable phenomenon seems to be caused by Tomoe Koga, the innocent but self-aware schoolgirl who offered her own butt to be kicked after mistakenly assaulting Sakuta, and the only cure is... pretending to be her boyfriend!</p>
+                <span class="price">22.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$30.000</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="CorpseParty" data-categoria="terror-suspenso">
+          <img src="../assets/mangas/VolCorpseParty/vol1.jpg" alt="">
+          <div class="manga-info">
+            <h2>Corpse Party (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">A stormy night. A harmless ghost story. A silly pact intended to symbolize their friendship. But before the students of class 2-9 at Kisaragi Academy even know what's happening, they've been swept up in a living nightmare that threatens to consume them all. When the spirits emerge, will even their friends be left to hear them scream...?</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolCorpseParty/vol2.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">The curse consumes all... With every new encounter, the darkness of Tenjin Elementary slowly comes to light. But what awaits is the sad fate of a friend... The terror accelerates in Volume 2 of Corpse Party: Blood Covered!</p>
+                <span class="price">90.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolCorpseParty/vol3.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">What if someone said the incantation wrong? What if that's why they all wandered into Tenjin Elementary School!? When your faith is shaken, doubt paints your heart black.</p>
+                <span class="price">90.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolCorpseParty/vol4.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">Kishinuma and Shinozaki may have escaped the cursed Tenjin Elementary School, but the rest of their surviving classmates are still trapped. Will they trade their safety for the lives of their friends? Meanwhile, Morishige's corpse obsession reaches a point past all return and Kizami shows his true colors to Yuka--will her big brother come to save her before it's too late?</p>
+                <span class="price">100.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$100.000</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="DeathNote" data-categoria="terror-suspenso">
+          <img src="../assets/mangas/VolDeathNote/vol1.jpg" alt="">
+          <div class="manga-info">
+            <h2>Death Note (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">The Kingdom of the Shinigami has become boring, and Ryu, one of them, has decided to drop his Death Note into the human world, looking for a little fun. Light Yagami, the top student in her class, finds it and soon discovers, to his horror and fascination, that the Death Note is real and that the person whose name is written on the Death Note will die. without fail.</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolDeathNote/vol2.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">Light Yagami is an ace student with great prospects--and he's bored out of his mind. But all that changes when he finds the Death Note, a notebook dropped by a rogue Shinigami death god. Any human whose name is written in the notebook dies, and now Light has vowed to use the power of the Death Note to rid the world of evil. But when criminals begin dropping dead, the authorities send the legendary detective L to track down the killer. With L hot on his heels, will Light lose sight of his noble goal...or his life?</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolDeathNote/vol3.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">Light is subject to extreme surveillance by L. His house has been filled with cameras and microphones, but even that hasn't been enough to stop Light on his mission. A family medical emergency distracts him and causes confusion, even though he hasn't been using the Death Note, someone else has. Is there a new Kira?... and if so, who is it? Light and L will unite their intelligence to discover and stop him.</p>
+                <span class="price">250.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolDeathNote/vol4.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">A Second Kira appears, prompting L to ask Light to come to the headquarters to join the investigation. Now Light can see his hidden messages, but he can't let anyone else notice his reaction! How are the two Kiras going to communicate?!"</p>
+                <span class="price">250.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$200.000</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="FruitsBasket" data-categoria="romance">
+          <img src="../assets/mangas/VolFruitsBasket/vol1.jpg" alt=""><a href=""></a></img>
+          <div class="manga-info">
+            <h2>Fruits Basket (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">Sawa Mitoma, an introverted and insecure young woman who has started high school at Kaibara High School, the same one where Tôru, Kyô, Yuki and company attended years ago. With no other intention than to go unnoticed during her high school years, Sawa's life will turn upside down when she meets Mutsuki Sôma, the first person in years who will treat her kindly.</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolFruitsBasket/vol2.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">Sakuya, a girl with a very sad past behind her but who does not lose her good humor, and strives every day to improve her situation. But when he falls in love with the mysterious Chihiro, his life takes a drastic turn...</p>
+                <span class="price">110.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolFruitsBasket/vol3.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">Chihiro, Sakuya's new classmate, treats her strangely: kind to everyone else, cold and distant to her... but he is the first to come to her aid when she finds herself in a bind. Is it possible that he knows something about his past...? Third volume of the new work by Natsuki Takaya, the author of Fruits Basket!</p>
+                <span class="price">120.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolFruitsBasket/vol4.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">Chihiro's mood swings have Sakuya very worried, but everything begins to make more sense when Chihiro's past in Tokyo is revealed, and why she prefers to hide it from others. New installment of the latest work by Natsuki Takaya, the author of Fruits Basket!</p>
+                <span class="price">120.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$125.000</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="HellGirl" data-categoria="terror-suspenso">
+          <img src="../assets/mangas/VolHellGirl/vol1.jpg" alt="">
+          <div class="manga-info">
+            <h2>Hell Girl (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">Begins with a young schoolgirl named Mari Shimizu looking for a new CD in a store. She realizes the store doesn't have what she's looking for and begins to leave, only to be stopped by a shop employee. He searches her bag and finds a CD which, despite Mari's pleas of innocence, he believes she tried to steal. She is saved when her classmate Satsuki Hayase begs the employee to let her off this one time, to which he agrees and lets the two girls go. They then both return home.</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolHellGirl/vol2.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">At the Tokyo City Figure Skating Jun, Azusa Saeki has fallen the second time during a competition, and she ends up in fifth place. Azusa, however, has high hopes of getting into the National Junior Championships, but unfortunately, her coach chooses someone else, Eri Satio and her substitute will be Marie Ishizuka. Azusa is furious and confronts her coach about choosing someone else, but her coach explains that Azusa is lazy and she should have practiced before the competition.</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolHellGirl/vol3.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">Mayu Fuji is a middle school student who is set to work at a country fair in order to gain at least 30,000 yen (around USD $250) for the summer. However, for her age, she isn't allowed to work until she is 18, so she forges her application in order to work at the fair. Shigeo Nakatani, the supervisor, accepts her application and allows her to work for five days, which is an easy gain for the money Mayu needs. He then offers an anime girl uniform.</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolHellGirl/vol4.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">Yui Takigawa is the step-daughter to Junichiro Arihara, who married her mother after her real dad disappeared. At her elementary school, her teacher asks if anyone is good at playing the piano, but no one is. Yui's friend asks if she could do it with practice and the whole class agrees. Yui spends the afternoon practicing the piano and has become good at it. At home, Yui informs her family that she wants to be a pianist in the choir, but her step-father orders her to quit. Yui has no idea why her step-father was angry at her for telling him that she wanted to be a pianist. Her mother, Tamiko offers her a piano practice book and Yui takes it to school and continues to practice, but she lies to her step-father that she quit.</p>
+                <span class="price">200.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$200.000</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="JJKaisen" data-categoria="accion">
+          <img src="../assets/mangas/VolJJKaisen/vol01.jpg" alt="">
+          <div class="manga-info">
+            <h2>Jujutsu Kaisen (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">Megumi Fushiguro investigates Sugisawa Municipal High School for a powerful curse. The high school occult club faces closure due to Yuji Itadori's relationship with other clubs. After school, Itadori visits his grandfather in the hospital one last time. Megumi confronts Itadori at the hospital and explains that a special grade curse threatens their school and club members. The duo return to school and fight together to save the other students from demonic curses. Megumi and Itadori are surprised by a more powerful spirit, and the former is injured.</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolJJKaisen/vol02.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">Itadori switches his consciousness with Sukuna. The King of Curses attempts to murder Itadori's friends, but ends up doing exactly what the young man wanted when he realizes his plan may not turn out the way he wanted. In a matter of seconds, kill the special grade cursed spirit.</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolJJKaisen/vol03.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">Aoi Todo and Mai Zenin from the Kyoto Metropolitan Magic Technical College arrive in Tokyo to prepare for the Exchange Festival and are eager to meet the third-year substitutes.</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolJJKaisen/vol04.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">Ignoring orders from Kento Nanami and Kiyotaka Ijichi, Itadori rushes to stop Junpei Yoshino before he wastes his life.</p>
+                <span class="price">200.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$200.000</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="LovelyComplex" data-categoria="romance">
+          <img src="../assets/mangas/VolLovelyComplex/vol1.jpg" alt=""><a href=""></a></img>
+          <div class="manga-info">
+            <h2>Lovely Complex (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">The chapter starts with Risa Koizumi sleeping while standing and snoring during the summer closing ceremony of her first year of high school as her fellow students try to wake her and teacher screams at her. Introducing herself and her contradictory surname, Koizumi meaning "little spring" instead of Oizumi meaning "big spring."</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolLovelyComplex/vol2.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">First-year high school student Risa Koizumi is 5'7". She and Atsushi Ōtani (5'1") are considered their class's lopsided comedy duo, but actually all they do is quarrel. However, when Risa falls for Suzuki, a guy in a different class, and Ōtani falls for Risa's friend Chiharu, the two of them team up to get the love they want.</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolLovelyComplex/vol3.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">First-year high school student Risa Koizumi is 5'7". She and Atsuhi Ōtani (5'1") are considered their class's lopsided comedy duo, and have so much in common that a "love fortune" machine tells them they're 100% compatible - but in fact all they do is bicker. Right now, they're competing over who can hook up with someone first, and Ōtani's ex-girlfriend shows up and says that she has something to tell him! It looks like they might get back together, but it turns out that she has a new boyfriend, and all she wanted to tell Ōtani was that his height wasn't the reason she had dumped him.</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolLovelyComplex/vol4.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">Even though they're now in their second year of high school, "jumbo-gal" Risa Koizumi and shrimpy Atsuhi Ōtani are still in the same class. The only difference is that Risa has a crush on her former mortal enemy! Seiko, an adorable first-year girl, falls in love with Ōtani at first sight, and Ōtani eagerly laps up her attentions, which includes a very public kiss! It looks like they'll start going out, but it turns out that Seiko is actually a boy.</p>
+                <span class="price">200.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$200.000</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="Naruto" data-categoria="accion">
+          <img src="../assets/mangas/VolNaruto/vol01.jpg" alt="">
+          <div class="manga-info">
+            <h2>Naturo (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">Naruto Uzumaki is a boy who gets into a lot of trouble and has always been feared in Konoha as a monster, causing him to live in deep loneliness. He has always wanted to become a ninja in order to become Hokage that surpasses the previous ones, but not even he could perform basic Jutsus such as the Replica Jutsu.</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolNaruto/vol02.png" alt="">
+                <span>Vol. 2</span>
+                <p class="description">Iruka is sitting at lunch with the Third Hokage asking him if he can tell him who is the superior ninja who will train Naruto, the Hokage hands him the information book where he can see the students who graduated with him, Iruka is surprised to see the students. since none of them had passed Kakashi's test, meanwhile, Kakashi tells the 3 genin that it is better that they abandon him, he points out that Naruto, Sasuke and Sakura have failed in capturing some bells, since they were working On their own, if they had worked together, they could have done it.</p>
+                <span class="price">300.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolNaruto/vol03.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">To improve chakra control, and increase the effectiveness of their jutsus, Kakashi trains Team 7 in how to climb trees. Naruto fails completely, Sasuke can only make it halfway, and Sakura makes it to the top of the tree on the first try. After failing repeatedly; Naruto goes to Sakura for help.</p>
+                <span class="price">350.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolNaruto/vol04.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">Naruto releases the Kyūbi's chakra and Haku notices that Naruto's wounds are beginning to heal quickly. Kakashi and Zabuza feel a strange and powerful chakra, then Kakashi realizes that it is from the Kyūbi, he immediately deduces that he must end the fight quickly, so he takes out a scroll and stains it with blood.</p>
+                <span class="price">250.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$250.000</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="NeonGenesisEvangelion" data-categoria="accion">
+          <img src="../assets/mangas/VolNeonGenesisEvangelion/vol1.jpg" alt="">
+          <div class="manga-info">
+            <h2>Neon Genesis Evangelion (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">Shinji Ikari did not imagine that his life could change so much: a simple sphere that he finds by chance makes him one of the members of a mysterious group that fights the Apostles, in an attempt to prevent the destruction of the world. The new series from the Evangelion universe, darker and more exciting than ever!</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolNeonGenesisEvangelion/vol2.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">Shinji discovers the convoluted plot hidden behind the angelic faces of Rei, Asuka or Kaworu: children created to fight the Apostles, living weapons to save Humanity. And why is he one of them? The new series from the Evangelion universe, darker and more exciting than ever!</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolNeonGenesisEvangelion/vol3.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">The failure of the Fourth Child has been a severe blow to NERV and all those who rely on it to protect the city, and all of humanity, from the attack of these monstrous beings. But Kaji discovers that the Angels' attacks are not as random or indiscriminate as they seem, but that what they really intend is to carry out a rescue operation...</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolNeonGenesisEvangelion/vol4.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">In this volume, Shinji, Rei, and Asuka are conducting a joint synchronization test when they suddenly go dark at NERV. Secrets and hidden truths will come to light and will not leave the characters indifferent. Feelings are running high and the appearance of a new pilot will give an unexpected turn to the...</p>
+                <span class="price">200.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$125.999</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite esta estructura para cada manga -->
+        <div class="manga-item" id="YakuzaLover" data-categoria="romance">
+          <img src="../assets/mangas/VolYakuzaLover/vol1.jpg" alt="">
+          <div class="manga-info">
+            <h2>Yakuza Lover (<span class="tittle-span">vol. 1</span>)</h2>
+            <p class="title-descrition">After the atack at the party, Yuri goes to see Oya to thank him for saving her and as much as she hates to admit it, she can't deny there's an attraction. However, when tragedy strikes, Yuri attempts to turn her back on Oya and his dangerous lifestyle for good—but will the allure prove too great to resist?</p>
+            <h2>volumenes</h2>
+            <div class="volumenes">
+              <div class="volume-item">
+                <img src="../assets/mangas/VolYakuzaLover/vol2.jpg" alt="">
+                <span>Vol. 2</span>
+                <p class="description">Yuri and Oya's romantic getaway in Shanghai is cut short when sinister Russian mob boss Semilio kidnaps Yuri and tries to make her his own. But Yuri won't be won over so easily and fights off his advances. And then Oya suddenly comes to her rescue! With Yuri finally out of harm's way, Oya charges headfirst into battle against Semilio, leaving Yuri to wonder if he'll make it out alive.</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolYakuzaLover/vol3.jpg" alt="">
+                <span>Vol. 3</span>
+                <p class="description">Reunited at last, Oya and Yuri savor their first night back in each other's arms by making love until Yuri passes out from exhaustion. Later, Yuri returns to her normal life in Japan, but it isn't long before Oya comes to whisk her away. When he takes her to a private villa, Yuri believes it's so the two of them can get a second chance at a carefree summertime romp together. But it soon becomes clear that Oya has something else on his mind.</p>
+                <span class="price">200.000</span>
+              </div>
+              <div class="volume-item">
+                <img src="../assets/mangas/VolYakuzaLover/vol4.jpg" alt="">
+                <span>Vol. 4</span>
+                <p class="description">Yuri and Oya's relationship faces complications when Oya's father, the boss of the syndicate, issues a warning to Yuri, demanding she cut ties with Oya and the yakuza. When Oya finds out, the situation becomes charged. Meanwhile, a mysterious woman enters the fray, soon to add new challenges to the star-crossed couple's growing love.</p>
+                <span class="price">200.000</span>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Price: <span class="main-Price">$125.999</span></p>
+              <button class="add-to-cart">Add cart</button>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+
+      <div class="contact-me">
+        <p>Contact us</p>
+
+        <div class="contenedor-redes-sociales">
+          <a class="facebook" href="https://www.facebook.com/FormandoLaWeb">
+            <span class="cuadrado">
+              <i class="fa fa-facebook"></i>
+            </span>
+            <span class="titulo">Facebook</span></a>
+
+          <a class="gplus" href="https://plus.google.com/114090693030000856714">
+            <span class="cuadrado">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <span class="titulo">E-mail</span></a>
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <h2>Sign up to receive emails</h2>
+        <p>Sign up to stay informed about all the news on the website!</p>
+
+        <form action="mailto:tu_correo_electronico@gmail.com" method="post" enctype="text/plain">
+          <input type="email" id="email" name="email" class="newsletter-input" placeholder="Email" required>
+          <button type="submit">subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-copy">
+      <p>Copyright &copy;Yarigai-MangaStore.
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">cookies</a>
+        <a href="#">AdChoice</a>
+      </p>
+    </div>
+
+  </footer>
+  
+  <script src="../scripts/catalog.js"></script>
+  <script src="../scripts/catalogSearch.js"></script>
+
+</body>
+</html>
