@@ -19,6 +19,25 @@
     <main class="main">
         <h1>Purchase Form</h1>
         <div class="products-container"></div>
+        <div class="manga-info">
+            <div class="manga-image">
+                <img src="../assets/mangas/VolAnother/vol1.jpg" alt="">
+            </div>
+            <div class="manga-details">
+                <div>
+                    <label for="manga-name">Manga:</label>
+                    <input type="text" id="manga-name" name="manga-name" value="Another Vol.1"
+                        readonly>
+                    <label for="manga-price">Price:</label>
+                    <input type="text" class="manga-price" name="manga-price" value="150000"
+                        readonly>
+                </div>
+                <div>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" class="quantity" name="quantity" min="1" value="1">
+                </div>
+            </div>
+        </div>
         <form id="purchase-form">
             <div>
                 <label for="payment-method">Payment Method:</label>
