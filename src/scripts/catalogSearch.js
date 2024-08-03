@@ -2,6 +2,13 @@ function searchManga() {
 
     const searchTerm = document.querySelector('#search-input').value.trim().toLowerCase();
     const mangaItems = document.querySelectorAll('.manga-item');
+    const searchInput = document.querySelector('#search-input');
+
+    searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            searchManga();
+        }
+    });
 
     mangaItems.forEach(item => {
         const mangaTitle = item.querySelector('h2').innerText.trim().toLowerCase();
