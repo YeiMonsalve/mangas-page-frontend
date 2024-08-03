@@ -8,15 +8,13 @@
     <link rel="icon" href="../assets/logos/Yarigai.ico">
     <link rel="stylesheet" href="../styles/cart.css">
     <link rel="stylesheet" href="../styles/headerFooter.css">
-    <script src="https://kit.fontawesome.com/ea55bac2b6.js" crossorigin="anonymous"></script>
 </head>
 
 <body translate="no">
     <header class="header">
-
         <div class="cart">
             <button onclick="location.href='cart.html'">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <img src="../assets/icons/cartShopping.svg" alt="">
                 <span id="cart-count" class="cart-count">0</span>
             </button>
         </div>
@@ -28,12 +26,12 @@
 
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu" id="menuIconDesp">
             <nav>
                 <ul class="menu">
                     <li class="menu-item"><a href="../../index.html">Home</a></li>
                     <li class="menu-item"><a href="catalog.html">Catalog</a></li>
-                    <li class="menu-item"><a href="./registerClient.html">Sign up</a></li>
+                    <li class="menu-item"><a href="registerClient.html">Sign up</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,9 +41,20 @@
         <div class="cart-container">
             <h1>Shopping Cart</h1>
 
-            <div class="cart-items"></div>
+            <div class="cart-items">
+                <!-- <p class="empty-cart-message">You have no items in your cart.</p> -->
+                <div class="cart-item">
+                    <input type="checkbox" class="select-product">
+                    <img src="../assets/mangas/VolAnother/vol1.jpg" alt="">
+                    <div class="product-info">
+                        <div class="product-title">Another Vol.1</div>
+                        <div class="product-details">Price: 150.000</div>
+                    </div>
+                    <button class="remove-button">Remove</button>
+                </div>
+            </div>
 
-            <button class="buy-button">Buy</button>
+            <button class="buy-button" onclick="window.location.href='buy.html'">Buy</button>
             <button class="remove-selected-button">Delete Selected</button>
         </div>
     </main>
@@ -54,21 +63,20 @@
         <div class="footer-content">
 
             <div class="contact-me">
-                <p>Contact us</p>
-
+                <p>Contact Us</p>
                 <div class="contenedor-redes-sociales">
-                    <a class="facebook" href="https://www.facebook.com/FormandoLaWeb">
+                    <a class="facebook" href="#">
                         <span class="cuadrado">
-                            <i class="fa fa-facebook"></i>
+                            <img src="../assets/icons/facebook.svg" alt="facebook">
                         </span>
                         <span class="titulo">Facebook</span>
                     </a>
-
-                    <a class="gplus" href="https://plus.google.com/114090693030000856714">
+                    <a class="gplus" href="#">
                         <span class="cuadrado">
-                            <i class="fa-solid fa-envelope"></i>
+                            <img src="../assets/icons/e-mail.svg" alt="e-mail">
                         </span>
-                        <span class="titulo">E-mail</span></a>
+                        <span class="titulo">E-mail</span>
+                    </a>
                 </div>
             </div>
 
@@ -92,6 +100,7 @@
                 <a href="#">AdChoice</a>
             </p>
         </div>
+
     </footer>
 
 </body>
