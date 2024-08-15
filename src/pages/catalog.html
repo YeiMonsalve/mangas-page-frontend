@@ -12,7 +12,6 @@
 
 <body translate="no">
   <header class="header">
-
     <div class="cart">
       <button onclick="location.href='cart.html'">
         <img src="../assets/icons/cartShopping.svg" alt="">
@@ -27,16 +26,26 @@
 
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <div class="dropdown-menu">
+    <div class="dropdown-menu" id="menuIconDesp">
       <nav>
         <ul class="menu">
           <li class="menu-item"><a href="../../index.html">Home</a></li>
           <li class="menu-item"><a href="catalog.html">Catalog</a></li>
-          <li class="menu-item"><a href="registerClient.html">Log in</a></li>
+          <li class="menu-item">
+            <a href="#" id="profile-header-link">
+              <img class="profile-header" src="../assets/icons/profile-icon.svg" alt="profile-icon">
+            </a>
+            <ul class="submenu" id="submenu">
+              <li><a href="#">Profile Settings</a></li>
+              <li><a href="#">Order History</a></li>
+              <li><a href="#">Sign Up</a></li>
+              <li><a href="#">Log In</a></li>
+              <li><a href="#">Log Out</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
-
   </header>
 
   <main class="main">
@@ -521,6 +530,7 @@
   
   <script src="../scripts/catalog.js"></script>
   <script src="../scripts/catalogSearch.js"></script>
+  <script src="../scripts/indexSubmenu.js"></script>
 
 </body>
 </html>

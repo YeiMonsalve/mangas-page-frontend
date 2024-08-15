@@ -80,11 +80,53 @@ body {
     list-style: none;
 }
 
+.menu-item {
+    position: relative;
+}
 
 .menu-item a {
     font-size: 1.2rem;
     text-decoration: none;
     color: #246A73;
+}
+
+.profile-header {
+    width: 35px;
+}
+
+.submenu {
+    display: none;
+    position: absolute; 
+    min-width: 200px;
+    top: 100%; 
+    left: -150px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .4); 
+    z-index: 2; 
+}
+
+.submenu.show {
+    display: block;
+}
+
+.submenu li {
+    padding: 8px 12px;
+}
+
+.submenu li:hover {
+    background-color: #246A73;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #246A73; 
+}
+
+.submenu li:hover a {
+    color: #fff;
 }
 
 .footer {
@@ -258,6 +300,7 @@ form button {
 
     .menu {
         margin: 0px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .4); 
         padding: 4% 40% 4% 40%;
         background-color: #fff;
     }
@@ -271,5 +314,9 @@ form button {
         font-size: 2rem;
         cursor: pointer;
         color: #246A73;
+    }
+
+    .submenu {
+        left: -32px;
     }
 }
