@@ -26,6 +26,12 @@ body {
     border: none;
     cursor: pointer;
     background-color: inherit;
+    transition: transform .5s ease-in-out;
+}
+
+.cart button:hover,
+.tittle-logo:hover {
+    transform: scale(1.2);
 }
 
 .cart img {
@@ -43,15 +49,18 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    transition: transform .5s ease-in-out;
 }
 
 .tittle-logo img {
     width: 100px;
+    cursor: pointer;
 }
 
 .tittle-logo h2 {
     font-size: 2rem;
     font-style: oblique;
+    cursor: pointer;
     color: #246A73;
 }
 
@@ -82,6 +91,12 @@ body {
 
 .menu-item {
     position: relative;
+    transition: transform .5s ease-in-out;
+}
+
+.menu-item:nth-child(1):hover,
+.menu-item:nth-child(2):hover {
+    transform: scale(1.2);
 }
 
 .menu-item a {
@@ -199,15 +214,15 @@ body {
 
 .contenedor-redes-sociales .facebook:hover,
 .contenedor-redes-sociales .facebook span.cuadrado {
-    background: #3b5998;
+    background: #3B5998;
 }
 
 .contenedor-redes-sociales .facebook span.titulo {
-    color: #3b5998;
+    color: #3B5998;
 }
 
 .contenedor-redes-sociales .gplus {
-    border: 2px solid #d64136;
+    border: 2px solid #D64136;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
@@ -253,6 +268,10 @@ form button {
     cursor: pointer;
     color: white;
     background-color: #6A93AA9F;
+}
+
+form button:hover {
+    background-color: #246A73;
 }
 
 .footer-copy {
