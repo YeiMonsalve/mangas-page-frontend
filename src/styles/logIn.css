@@ -3,12 +3,12 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: url(../assets/login/bgRegister.jpg);
+    background-image: url(../assets/login/bgLogin.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: multiply; 
-    background-color: rgba(183, 182, 182, 0.9);
+    background-color: rgba(172, 170, 170, 0.9);
 }
 
 .header {
@@ -21,11 +21,6 @@ body {
     background-color: #fff;
 }
 
-.header img {
-    width: 100px;
-    transition: transform 0.3s ease;
-}
-
 .header h2 {
     font-size: 2rem;
     font-style: oblique;
@@ -36,6 +31,7 @@ body {
 .main {
     display: flex;
     flex-wrap: wrap;
+    height: 78vh;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -50,6 +46,10 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     background-color: #fff;
+}
+
+.content img {
+    width: 150px;
 }
 
 .form-group {
@@ -87,7 +87,7 @@ body {
     cursor: pointer;
 }
 
-.btn-primary {
+.btn-cancel {
     color: #fff;
     background-color: #6C757D;
 }
@@ -97,7 +97,7 @@ body {
     background-color: #6A93AA9F;
 }
 
-.btn-primary:hover {
+.btn-cancel:hover {
     background-color: #5A6268;
 }
 
