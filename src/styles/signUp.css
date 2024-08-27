@@ -3,7 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: url(../assets/login/bgRegister.jpg);
+    background-image: url(../assets/login_register/bgRegister.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
