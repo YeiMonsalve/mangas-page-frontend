@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-size: 1.3rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -9,12 +10,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    min-height: 12vh;
 }
 
 .tittle-logo {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center ;
     gap: 10px;
 }
 
@@ -23,14 +26,20 @@ body {
     height: auto;
 }
 
-.tittle-logo h2 {
+.tittle-logo h1 {
     margin: 0;
     font-style: oblique;
     color: #246A73;
     transition: transform 0.3s ease;
 }
 
-.main {
+main {
+    min-height: 82vh;
+}
+
+.main-container {
+    flex-wrap: wrap;
+    width: 80%;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -95,16 +104,14 @@ textarea {
     resize: vertical;
 }
 
-
 .buttons {
     display: flex;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
-button {
+.main-container button {
     width: 100%;
-    margin: 10px;
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
@@ -116,7 +123,7 @@ button {
 
 button:hover {
     background-color: #246A73;
-}
+} 
 
 @media only screen and (max-width: 410px) {
     .manga-info {
