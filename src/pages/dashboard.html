@@ -32,13 +32,13 @@
                     </a>
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="#">|
+                            <a href="#" data-target="register-users">|
                                 <img src="../assets/icons/add.svg" alt="icono añadir usuarios">
                                 <span>Register user</span>
                             </a>
                         </li>
                         <li class="submenu-item">
-                            <a href="#">|    
+                            <a href="#" data-target="view-users">|
                                 <img src="../assets/icons/file.svg" alt="icono ver usuarios">
                                 <span>View users</span>
                             </a>
@@ -52,13 +52,13 @@
                     </a>
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="#">|
+                            <a href="#" data-target="register-mangas">|
                                 <img src="../assets/icons/add.svg" alt="icono añadir mangas">
                                 <span>Add manga</span>
                             </a>
                         </li>
                         <li class="submenu-item">
-                            <a href="#">|
+                            <a href="#" data-target="view-mangas">|
                                 <img src="../assets/icons/file.svg" alt="icono ver mangas">
                                 <span>View mangas</span>
                             </a>
@@ -66,7 +66,7 @@
                     </ul>
                 </li>
                 <li class="list-item">
-                    <a href="#">
+                    <a href="#" data-target="orders">
                         <img src="../assets/icons/orders.svg" alt="icono de ordenes">
                         <span>Orders</span>
                     </a>
@@ -99,9 +99,66 @@
     </div>
 
 
-    <main>
-        <h1>Content</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti iure nam aliquid debitis voluptatum reiciendis reprehenderit minus, et sed hic suscipit facilis enim totam. Nesciunt eveniet velit modi voluptates temporibus?</p>
+    <main id="content">
+
+        <div id="principal-content" class="section">
+            <div class="principal-content-container">
+                <img src="../assets/logos/Yarigai.png" alt="logo">
+                <p>Welcome to the administrative page of <span>Yarigai-MangaStore.</span></p>
+            </div>
+        </div>
+
+        <div id="register-users" class="section">Registrar usuarios</div>
+
+        <div id="view-users" class="section">
+            <span class="view-users-title">View Users</span>
+            <div class="view-users-container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Rol</th>
+                            <th>Names</th>
+                            <th>Last Names</th>
+                            <th>Phone Number</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Status</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Admin</td>
+                            <td>Pepito</td>
+                            <td>Perez</td>
+                            <td>325323</td>
+                            <td>carrera siempre viva</td>
+                            <td>pepito@gmail.com</td>
+                            <td>pepito123</td>
+                            <td>Activo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Client</td>
+                            <td>Jebus</td>
+                            <td>Cristo</td>
+                            <td>734538</td>
+                            <td>algunaDirección</td>
+                            <td>jebucristo@hotmail.com</td>
+                            <td>jebussisabe</td>
+                            <td>Inactive</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="view-mangas" class="section">Mostrar Mangas</div>
+        <div id="register-mangas" class="section">Registrar Mangas</div>
+        <div id="orders" class="section">Contenido de ordenes</div>
     </main>
 
     <script src="../scripts/dashboard.js"></script>

@@ -50,3 +50,33 @@ submenu.forEach(item => {
         }
     });
 });
+
+// Función para mostrar el main de cada opcion de la barra de navegación
+function showSection(targetId) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+        targetSection.style.display = 'block';
+    }
+}
+
+document.querySelectorAll('.list-item a, .submenu-item a').forEach(link => {
+    link.addEventListener('click', (event) => {
+
+        if (link.getAttribute('href') === '../../index.html') {
+            return;
+        }
+        
+        event.preventDefault();
+
+        const targetId = link.getAttribute('data-target');
+        if (targetId) {
+            showSection(targetId);
+        }
+    });
+});
+
+showSection('principal-content');
