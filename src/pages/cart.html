@@ -14,14 +14,14 @@
     <header class="header">
         <div class="cart">
             <button onclick="location.href='cart.html'">
-                <img src="../assets/icons/cartShopping.svg" alt="">
+                <img src="../assets/icons/cartShopping.svg" alt="carrito de compras">
                 <span id="cart-count" class="cart-count">0</span>
             </button>
         </div>
 
         <div class="tittle-logo">
             <img src="../assets/logos/Yarigai.png" alt="Logo" onclick="location.href='../../index.html'">
-            <h2 onclick="location.href='../../index.html'">Yarigai-MangaStore</h2>
+            <h1 onclick="location.href='../../index.html'">Yarigai-MangaStore</h1>
         </div>
 
         <input type="checkbox" id="menu-toggle">
@@ -55,8 +55,8 @@
             <div class="cart-items">
                 <!-- <p class="empty-cart-message">You have no items in your cart.</p> -->
                 <div class="cart-item">
-                    <input type="checkbox" class="select-product">
-                    <img src="../assets/mangas/VolAnother/vol1.jpg" alt="">
+                    <input type="checkbox" id="checkbox" class="select-product" aria-label="Select Product">
+                    <img src="../assets/mangas/VolAnother/vol1.jpg" alt="imagen del manga en el carrito">
                     <div class="product-info">
                         <div class="product-title">Another Vol.1</div>
                         <div class="product-details">Price: 150.000</div>
@@ -94,12 +94,12 @@
             <div class="newsletter">
                 <h2>Sign up to receive emails</h2>
                 <p>Sign up to stay informed about all the news on the website!</p>
-
+      
                 <form action="mailto:tu_correo_electronico@gmail.com" method="post" enctype="text/plain">
-                    <input type="email" id="email" name="email" class="newsletter-input" placeholder="Email" required>
-                    <button type="submit">subscribe</button>
+                  <input type="email" id="email" name="email" class="newsletter-input" placeholder="Email" autocomplete="email" required>
+                  <button type="submit">subscribe</button>
                 </form>
-            </div>
+              </div>
 
         </div>
 
@@ -114,7 +114,8 @@
 
     </footer>
 
-    <script src="../scripts/indexSubmenu.js"></script>
-    
+    <script src="../scripts/header_Menu_Submenu.js"></script>
+
 </body>
+
 </html>

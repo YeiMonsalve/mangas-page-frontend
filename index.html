@@ -14,14 +14,14 @@
     <header class="header">
         <div class="cart">
             <button onclick="location.href='src/pages/cart.html'">
-                <img src="src/assets/icons/cartShopping.svg" alt="">
+                <img src="src/assets/icons/cartShopping.svg" alt="carrito de compras">
                 <span id="cart-count" class="cart-count">0</span>
             </button>
         </div>
 
         <div class="tittle-logo">
-            <img src="./src/assets/logos/Yarigai.png" alt="Logo" onclick="location.href='index.html'">
-            <h2 onclick="location.href='index.html'">Yarigai-MangaStore</h2>
+            <img src="src/assets/logos/Yarigai.png" alt="Logo" onclick="location.href='index.html'">
+            <h1 onclick="location.href='index.html'">Yarigai-MangaStore</h1>
         </div>
 
         <input type="checkbox" id="menu-toggle">
@@ -64,19 +64,19 @@
 
                     <div id="text2" class="text">
                         <h3>You can't find the mangas that you're searching?</h3>
-                        <p>Hither is a variety of mangas that can be what you need, explore more in the catalog</p>
+                        <p>Here is a variety of mangas that can be what you need, explore more in the catalog</p>
                     </div>
 
                     <div id="text3" class="text">
-                        <h3>Did you Sing Up already?</h3>
+                        <h3>Did you Sign Up already?</h3>
                         <p>For now we have a limited categories of mangas, but new things are going to arrive, don't lose new offers and products, what are you waiting for?</p>
                     </div>
 
                     <div class="left" onclick="left()">
-                        <img src="./src/assets/icons/arrowLeft.svg" alt="">
+                        <img src="src/assets/icons/arrowLeft.svg" alt="flecha navegación izquierda">
                     </div>
                     <div class="right" onclick="right()">
-                        <img src="./src/assets/icons/arrowRight.svg" alt="">
+                        <img src="src/assets/icons/arrowRight.svg" alt="flecha navegación derecha">
                     </div>
 
                     <div class="dots">
@@ -89,10 +89,10 @@
             </div>
             <div class="asideRight">
                 <div class="images-decoration">
-                    <img src="src/assets/indexDecoration/img01.jpg" alt="indexDecoration1">
-                    <img src="src/assets/indexDecoration/img02.jpg" alt="indexDecoration2">
-                    <img src="src/assets/indexDecoration/img03.jpg" alt="indexDecoration3">
-                    <img src="src/assets/indexDecoration/img04.jpg" alt="indexDecoration4">
+                    <img src="src/assets/indexDecoration/img01.jpg" alt="imagen decoracion">
+                    <img src="src/assets/indexDecoration/img02.jpg" alt="imagen decoracion">
+                    <img src="src/assets/indexDecoration/img03.jpg" alt="imagen decoracion">
+                    <img src="src/assets/indexDecoration/img04.jpg" alt="imagen decoracion">
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="manga-item">
-                    <img src="./src/assets/mangas/VolCorpseParty/vol1.jpg" alt="CorpsePartyVol1" onclick="window.location.href = 'src/pages/catalog.html#CorpseParty'">
+                    <img src="src/assets/mangas/VolCorpseParty/vol1.jpg" alt="CorpsePartyVol1" onclick="window.location.href = 'src/pages/catalog.html#CorpseParty'">
                     <div class="manga-info">
                         <h2>Corpse Party</h2>
                         <p>Based on the video game of the same name, Corpse Party: Tortured Souls follows the main story of five students who find themselves transported to a mysterious institute inhabited by numerous ghosts who want to end their lives.</p>
@@ -223,13 +223,13 @@
                 <div class="contenedor-redes-sociales">
                     <a class="facebook" href="#">
                         <span class="cuadrado">
-                            <img src="./src/assets/icons/facebook.svg" alt="facebook">
+                            <img src="src/assets/icons/facebook.svg" alt="facebook">
                         </span>
                         <span class="titulo">Facebook</span>
                     </a>
                     <a class="gplus" href="#">
                         <span class="cuadrado">
-                            <img src="./src/assets/icons/e-mail.svg" alt="e-mail">
+                            <img src="src/assets/icons/e-mail.svg" alt="e-mail">
                         </span>
                         <span class="titulo">E-mail</span>
                     </a>
@@ -241,7 +241,7 @@
                 <p>Sign up to stay informed about all the news on the website!</p>
 
                 <form action="mailto:tu_correo_electronico@gmail.com" method="post" enctype="text/plain">
-                    <input type="email" id="email" name="email" class="newsletter-input" placeholder="Email" required>
+                    <input type="email" id="email" name="email" class="newsletter-input" placeholder="Email" autocomplete="email" required>
                     <button type="submit">subscribe</button>
                 </form>
             </div>
@@ -259,8 +259,7 @@
 
     </footer>
     <script src="src/scripts/index.js"></script>
-    <script src="src/scripts/indexMenu.js"></script>
-    <script src="src/scripts/indexSubmenu.js"></script>
+    <script src="src/scripts/header_Menu_Submenu.js"></script>
 </body>
 
 </html>
