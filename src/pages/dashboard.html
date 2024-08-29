@@ -26,6 +26,13 @@
         <nav class="navigation">
             <ul class="list">
                 <li class="list-item">
+                    <a href="#" data-target="home">
+                        <img src="../assets/icons/home.svg" alt="icono de ordenes">
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li class="list-item">
                     <a href="#">
                         <img src="../assets/icons/users.svg" alt="icono de usuarios">
                         <span>Users</span>
@@ -72,7 +79,7 @@
                     </a>
                 </li>
                 <li class="list-item">
-                    <a href="../../index.html">
+                    <a href="../../index.html" data-target="close-sesion">
                         <img src="../assets/icons/logout.svg" alt="icono de cerrar sesión">
                         <span>Log out</span>
                     </a>
@@ -101,7 +108,7 @@
 
     <main id="content">
 
-        <div id="principal-content" class="section">
+        <div id="home" class="section">
             <div class="principal-content-container">
                 <img src="../assets/logos/Yarigai.png" alt="logo">
                 <p>Welcome to the administrative page of <span>Yarigai-MangaStore.</span></p>
@@ -111,9 +118,16 @@
         <div id="register-users" class="section">Registrar usuarios</div>
 
         <div id="view-users" class="section">
-            <span class="view-users-title">View Users</span>
-            <div class="view-users-container">
-                <table class="table table-striped">
+            <span class="view-title">View Users</span>
+
+            <div class="view-searchbar">
+                <label for="searchbar">Search bar</label>
+                <input type="text" id="searchbar" placeholder="Search user">
+                <button id="searchButton">Search</button>
+            </div>
+
+            <div class="view-container">
+                <table class="table">
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -138,18 +152,28 @@
                             <td>carrera siempre viva</td>
                             <td>pepito@gmail.com</td>
                             <td>pepito123</td>
-                            <td>Activo</td>
+                            <td>Active</td>
+                            <td>
+                                <img class="options" src="../assets/icons/change.svg" alt="change status">
+                                <img class="options" src="../assets/icons/edit.svg" alt="edit user">
+                                <img class="options" src="../assets/icons/delete.svg" alt="delete user">
+                            </td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
                             <td>Client</td>
-                            <td>Jebus</td>
-                            <td>Cristo</td>
+                            <td>Jaimito</td>
+                            <td>De la calle</td>
                             <td>734538</td>
                             <td>algunaDirección</td>
-                            <td>jebucristo@hotmail.com</td>
-                            <td>jebussisabe</td>
+                            <td>jaimitodelacalle@hotmail.com</td>
+                            <td>jaimitosabe</td>
                             <td>Inactive</td>
+                            <td>
+                                <img class="options" src="../assets/icons/change.svg" alt="change status">
+                                <img class="options" src="../assets/icons/edit.svg" alt="edit user">
+                                <img class="options" src="../assets/icons/delete.svg" alt="delete user">
+                            </td>
                         </tr>
                     </tbody>
                 </table>

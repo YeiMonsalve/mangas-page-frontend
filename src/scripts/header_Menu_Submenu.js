@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const submenu = document.getElementById('submenu');
 
     profileHeaderLink.addEventListener('click', (event) => {
-        event.preventDefault(); 
-        submenu.classList.toggle('show'); 
+        event.preventDefault();
+        submenu.classList.toggle('show');
     });
 
     document.addEventListener('click', (event) => {

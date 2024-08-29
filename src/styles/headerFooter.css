@@ -111,16 +111,16 @@ body {
 
 .submenu {
     display: none;
-    position: absolute; 
+    position: absolute;
     min-width: 200px;
-    top: 100%; 
+    top: 100%;
     left: -150px;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background-color: #fff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .4); 
-    z-index: 2; 
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+    z-index: 2;
 }
 
 .submenu.show {
@@ -137,7 +137,7 @@ body {
 
 .submenu li a {
     text-decoration: none;
-    color: #246A73; 
+    color: #246A73;
 }
 
 .submenu li:hover a {
@@ -181,7 +181,7 @@ body {
     display: inline-flex;
     align-items: center;
     color: #fff;
-    margin:5px;
+    margin: 5px;
 }
 
 .contenedor-redes-sociales a span.cuadrado {
@@ -254,7 +254,6 @@ body {
     margin: 3px 0 4px;
 }
 
-
 form input {
     margin: 10px;
     font-size: 1rem;
@@ -300,7 +299,7 @@ form button:hover {
         margin-left: 10px;
         margin-right: 10px;
     }
-} 
+}
 
 @media only screen and (max-width: 500px) {
     .cart {
@@ -319,7 +318,7 @@ form button:hover {
 
     .menu {
         margin: 0px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, .4); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
         padding: 4% 40% 4% 40%;
         background-color: #fff;
     }

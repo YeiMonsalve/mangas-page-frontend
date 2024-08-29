@@ -1,4 +1,4 @@
-// Poner el volumend el manga como principal
+// Poner el volumen del manga como principal
 
 document.addEventListener("DOMContentLoaded", function () {
   const mangaItems = document.querySelectorAll('.manga-item');
@@ -64,15 +64,15 @@ function searchManga() {
 //filtrar por mangas
 
 function filtrarMangas() {
-  var categoriaSeleccionada = document.getElementById("category-select").value;
-  var mangas = document.querySelectorAll(".manga-item");
+  const categoriaSeleccionada = document.getElementById("category-select").value;
+  const mangas = document.querySelectorAll(".manga-item");
 
   mangas.forEach(function (manga) {
-      var categoriaManga = manga.getAttribute("data-categoria");
-      if (categoriaSeleccionada === "todos" || categoriaManga === categoriaSeleccionada) {
-          manga.classList.remove("hidden");
-      } else {
-          manga.classList.add("hidden");
-      }
+    const categoriaManga = manga.getAttribute("data-categoria");
+    if (categoriaSeleccionada === "todos" || categoriaManga === categoriaSeleccionada) {
+      manga.classList.remove("hidden");
+    } else {
+      manga.classList.add("hidden");
+    }
   });
 }

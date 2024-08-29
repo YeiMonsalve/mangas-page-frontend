@@ -88,7 +88,8 @@ main {
     background-color: #246A73;
 }
 
-.buy-button, .remove-selected-button {
+.buy-button,
+.remove-selected-button {
     display: block;
     text-align: center;
     width: 100%;
@@ -100,7 +101,7 @@ main {
     cursor: pointer;
     color: #fff;
     background-color: #6A93AA9F;
-} 
+}
 
 .buy-button:hover,
 .remove-selected-button:hover {
