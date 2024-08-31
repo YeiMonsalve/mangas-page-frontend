@@ -30,7 +30,7 @@ body {
 }
 
 .cart button:hover,
-.tittle-logo:hover {
+.title-logo:hover {
     transform: scale(1.2);
 }
 
@@ -44,7 +44,7 @@ body {
     color: #246A73;
 }
 
-.tittle-logo {
+.title-logo {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -52,12 +52,12 @@ body {
     transition: transform .5s ease-in-out;
 }
 
-.tittle-logo img {
+.title-logo img {
     width: 100px;
     cursor: pointer;
 }
 
-.tittle-logo h1 {
+.title-logo h1 {
     font-size: 2rem;
     font-style: oblique;
     cursor: pointer;

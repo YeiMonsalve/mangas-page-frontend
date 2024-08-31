@@ -2,8 +2,6 @@
 const logo = document.getElementById("logo");
 const barraLateral = document.querySelector(".sidebar");
 const spans = document.querySelectorAll("span");
-const palanca = document.querySelector(".switch");
-const circle = document.querySelector(".circle");
 const menu = document.querySelector(".menu");
 const main = document.querySelector("main");
 const submenu = document.querySelectorAll(".list-item a");
@@ -25,12 +23,6 @@ menu.addEventListener("click", () => {
             span.classList.add("oculto");
         })
     }
-});
-
-palanca.addEventListener("click", () => {
-    let body = document.body;
-    body.classList.toggle("dark-mode");
-    circle.classList.toggle("actived");
 });
 
 logo.addEventListener("click", () => {
@@ -62,11 +54,6 @@ function showSection(targetId) {
     if (targetSection) {
         targetSection.style.display = 'block';
     }
-
-    window.addEventListener('load', () => {
-        const activeSection = localStorage.getItem('activeSection');
-        showSection(activeSection || home);
-    });
 }
 
 document.querySelectorAll('.list-item a, .submenu-item a').forEach(link => {
@@ -82,44 +69,71 @@ document.querySelectorAll('.list-item a, .submenu-item a').forEach(link => {
         if (targetId) {
             showSection(targetId);
 
-            localStorage.setItem('activeSection', targetId);
         }
     });
 });
 
-showSection('home');
+showSection('register-mangas');
 
 // Filtrador/Buscador
-const searchButton = document.getElementById('searchButton');
-const searchBar = document.getElementById('searchbar');
-const rows = document.querySelectorAll('.table tbody tr');
-
-searchBar.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-        searchTable();
-    }
+document.querySelectorAll('.searchButton').forEach(button => {
+    button.addEventListener('click', () => {
+        const section = button.closest('.section');
+        searchTable(section);
+    });
 });
 
-function searchTable() {
-    const input = searchBar.value.toLowerCase();
+document.querySelectorAll('.searchbar').forEach(input => {
+    input.addEventListener('input', () => {
+        const section = input.closest('.section');
+        handleInputChange(section);
+    });
+    input.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            const section = input.closest('.section');
+            searchTable(section);
+        }
+    });
+});
+
+function searchTable(section) {
+    const rows = section.querySelectorAll('.table tbody tr');
+    const input = section.querySelector('.searchbar').value.toLowerCase();
 
     rows.forEach(row => {
         const rowData = row.textContent.toLowerCase();
-        if (rowData.includes(input)) {
-            row.style.display = '';
-        } else {
-            row.style.display = 'none';
-        }
+        row.style.display = rowData.includes(input) ? '' : 'none';
     });
 }
 
-function handleInputChange() {
-    const input = searchBar.value.toLowerCase();
+function handleInputChange(section) {
+    const rows = section.querySelectorAll('.table tbody tr');
+    const input = section.querySelector('.searchbar').value.toLowerCase();
 
     rows.forEach(row => {
         row.style.display = (input === '') ? '' : row.style.display;
     });
 }
 
-searchButton.addEventListener('click', searchTable);
-searchBar.addEventListener('input', handleInputChange);
+// Manejo de la imagen al editar o registrar
+document.addEventListener('DOMContentLoaded', function() {
+    const fileInputs = document.querySelectorAll('input[type="file"]');
+    const imagePreviews = document.querySelectorAll('img.manga-image-edit');
+
+    fileInputs.forEach((fileInput, index) => {
+        const imagePreview = imagePreviews[index];
+        
+        fileInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+});

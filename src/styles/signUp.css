@@ -79,6 +79,10 @@ body {
     border-color: #246A73;
 }
 
+.rol {
+    display: none;
+}
+
 .form-buttons button {
     margin: 0 10px;
     padding: 10px 20px;

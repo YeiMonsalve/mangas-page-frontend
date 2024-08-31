@@ -86,23 +86,6 @@
                 </li>
             </ul>
         </nav>
-
-        <div>
-            <div class="line"></div>
-
-            <div class="dark-theme">
-                <div class="info">
-                    <img src="../assets/icons/moon.svg" alt="icono de modo oscuro">
-                    <span>Dark Mode</span>
-                </div>
-                <div class="switch">
-                    <div class="base">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
 
@@ -115,15 +98,90 @@
             </div>
         </div>
 
-        <div id="register-users" class="section">Registrar usuarios</div>
+        <div id="register-users" class="section">
+            <span class="view-title">Register User</span>
+            <div class="register-container">
+                <form method="post" autocomplete="off">
+
+                    <div class="register-section">
+                        <span>Basic Identification</span>
+                        <div class="form-group">
+                            <label for="user-first-name">Names</label>
+                            <div>
+                                <input type="text" id="user-first-name" name="txtUserNames" required="required" placeholder="Names" autocomplete="off">
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="user-last-name">Last Names</label>
+                            <div>
+                                <input type="text" id="user-last-name" name="txtUserLastNames" required="required" placeholder="Last names" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="register-section">
+                        <span>Contact Information</span>
+                        <div class="form-group">
+                            <label for="User-phone-number">Phone Number</label>
+                            <div>
+                                <input id="User-phone-number" type="number" name="txtUserPhoneNumber" required="required" placeholder="Phone number" autocomplete="off">
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="user-address">Address</label>
+                            <div>
+                                <input id="user-address" type="text" name="txtUserAddress" required="required" placeholder="Address" autocomplete="off">
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="user-email">Email</label>
+                            <div>
+                                <input id="user-email" type="email" name="txtUserEmail" required="required" placeholder="E-mail" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="register-section">
+                        <span>Access and Role</span>
+                        <div class="form-group">
+                            <label for="user-rol">Rol</label>
+                            <div>
+                                <input type="text" id="user-rol" name="txtUserRol" required="required" placeholder="User rol" autocomplete="off">
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="register-username">Username</label>
+                            <div>
+                                <input id="register-username" type="text" name="txtRegisterUser" required="required" placeholder="Username" autocomplete="off">
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="user-password">Password</label>
+                            <div>
+                                <input id="user-password" type="password" name="txtUserPassword" required="required" placeholder="password" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <div id="view-users" class="section">
             <span class="view-title">View Users</span>
 
             <div class="view-searchbar">
-                <label for="searchbar">Search bar</label>
-                <input type="text" id="searchbar" placeholder="Search user">
-                <button id="searchButton">Search</button>
+                <label for="searchbar-users">Search bar</label>
+                <input id="searchbar-users" type="text" class="searchbar" placeholder="Search user">
+                <button class="searchButton">Search</button>
             </div>
 
             <div class="view-container">
@@ -154,35 +212,281 @@
                             <td>pepito123</td>
                             <td>Active</td>
                             <td>
-                                <img class="options" src="../assets/icons/change.svg" alt="change status">
-                                <img class="options" src="../assets/icons/edit.svg" alt="edit user">
-                                <img class="options" src="../assets/icons/delete.svg" alt="delete user">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Client</td>
-                            <td>Jaimito</td>
-                            <td>De la calle</td>
-                            <td>734538</td>
-                            <td>algunaDirección</td>
-                            <td>jaimitodelacalle@hotmail.com</td>
-                            <td>jaimitosabe</td>
-                            <td>Inactive</td>
-                            <td>
-                                <img class="options" src="../assets/icons/change.svg" alt="change status">
-                                <img class="options" src="../assets/icons/edit.svg" alt="edit user">
-                                <img class="options" src="../assets/icons/delete.svg" alt="delete user">
+                                <button>
+                                    <img class="options" src="../assets/icons/change.svg" alt="change status">
+                                </button>
+                                <button onclick="window.editUser.showModal();">
+                                    <img class="options" src="../assets/icons/edit.svg" alt="edit user">
+                                </button>
+                                <button>
+                                    <img class="options" src="../assets/icons/delete.svg" alt="delete user">
+                                </button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+
+            <dialog id="editUser">
+                <form method="post" autocomplete="off">
+
+                    <div class="form-group">
+                        <label for="first-name">Names</label>
+                        <div>
+                            <input type="text" id="first-name" name="txtNames" required="required" placeholder="Names" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Last Names</label>
+                        <div>
+                            <input type="text" id="last-name" name="txtLastNames" required="required" placeholder="Last names" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Phone Number">Phone Number</label>
+                        <div>
+                            <input id="Phone Number" type="number" name="txtPhoneNumber" required="required" placeholder="Phone number" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Address">Address</label>
+                        <div>
+                            <input id="Address" type="text" name="txtAddress" required="required" placeholder="Address" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <div>
+                            <input id="Email" type="email" name="txtEmail" required="required" placeholder="E-mail" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Username">Username</label>
+                        <div>
+                            <input id="Username" type="text" name="txtUser" required="required" placeholder="Username" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <div>
+                            <input id="Password" type="password" name="txtPassword" required="required" placeholder="password" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Save changes</button>
+                    </div>
+                </form>
+                <div class="button-close">
+                    <button onclick="window.editUser.close();">Cancel</button>
+                </div>
+            </dialog>
         </div>
 
-        <div id="view-mangas" class="section">Mostrar Mangas</div>
-        <div id="register-mangas" class="section">Registrar Mangas</div>
-        <div id="orders" class="section">Contenido de ordenes</div>
+        <div id="view-mangas" class="section">
+            <span class="view-title">View Mangas</span>
+
+            <div class="view-searchbar">
+                <label for="searchbar-mangas">Search bar</label>
+                <input id="searchbar-mangas" type="text" class="searchbar" placeholder="Search manga">
+                <button class="searchButton">Search</button>
+            </div>
+
+            <div class="view-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Manga name</th>
+                            <th>Volume</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                <img src="../assets/mangas/VolAnother/vol1.jpg" alt="manga image">
+                            </td>
+                            <td>Another</td>
+                            <td>Vol. 1</td>
+                            <td>In 1972, a popular and charismatic student named Misaki Yomiyama belonging to class 3-3 of Yomiyama North School, died suddenly in the middle of the school year. Devastated by the loss, his classmates and teacher acted as if Misaki was still alive and even reserved a place for him at the graduation ceremony. What was even more telling was that Misaki appeared in the graduation photo.</td>
+                            <td>Horror-thriller</td>
+                            <td>125.999</td>
+                            <td>2</td>
+                            <td>available</td>
+                            <td>
+                                <button>
+                                    <img class="options" src="../assets/icons/change.svg" alt="change status">
+                                </button>
+                                <button onclick="window.editManga.showModal();">
+                                    <img class="options" src="../assets/icons/edit.svg" alt="edit user">
+                                </button>
+                                <button>
+                                    <img class="options" src="../assets/icons/delete.svg" alt="delete user">
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <dialog id="editManga">
+                <form method="post" autocomplete="off">
+
+                    <div class="form-group">
+                        <label for="edit-manga-image-file">Edit Manga Image</label>
+                        <div class="edit-image">
+                            <img id="edit-manga-image-preview" class="manga-image-edit" src="../assets/mangas/VolAnother/vol2.jpg" alt="edit manga image">
+                            <input id="edit-manga-image-file" type="file" accept="image/*">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manga-name">Manga name</label>
+                        <div>
+                            <input type="text" id="manga-name" name="txtMangaName" required="required" placeholder="Manga name" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mangaVolume">Manga volume</label>
+                        <div>
+                            <input type="text" id="mangaVolume" name="txtVolume" required="required" placeholder="Manga volume" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manga-description">Manga description</label>
+                        <div>
+                            <textarea id="manga-description" required="required" name="txtMangaDescription" placeholder="manga description" autocomplete="off"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manga-category">Manga category</label>
+                        <div>
+                            <input id="manga-category" type="text" name="txtMangaCategory" required="required" placeholder="manga category" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manga-price">Manga price</label>
+                        <div>
+                            <input id="manga-price" type="number" name="txtMangaPrice" required="required" placeholder="manga price" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manga-quantity">Manga quantity</label>
+                        <div>
+                            <input id="manga-quantity" type="number" name="txtMangaQuantity" required="required" placeholder="manga quantity" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Save changes</button>
+                    </div>
+                </form>
+                <div class="button-close">
+                    <button onclick="window.editManga.close();">Cancel</button>
+                </div>
+            </dialog>
+        </div>
+        </div>
+
+        <div id="register-mangas" class="section">
+            <span class="view-title">Register Manga</span>
+            <div class="register-container">
+                <form method="post" autocomplete="off">
+
+                    <div class="register-section">
+                        <span>Manga details</span>
+                        
+                        <div class="form-group">
+                            <label for="register-manga-title">Manga title</label>
+                            <div>
+                                <input type="text" id="register-manga-title" name="txtRegisterMangaTitle" required="required" placeholder="manga title" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="manga-image-file">Manga Image</label>
+                            <div class="edit-image">
+                                <img id="manga-image-preview" class="manga-image-edit manga-image-register" src="../assets/mangas/VolAnother/vol1.jpg" alt="manga image">
+                                <input id="manga-image-file" type="file" class="register-image" accept="image/*">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-manga-description">Manga description</label>
+                            <div>
+                                <textarea id="register-manga-description" required="required" name="txtRegisterMangaDescription" placeholder="manga description" autocomplete="off"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="register-section">
+                        <span>Publication Information</span>
+                        <div class="form-group">
+                            <label for="register-manga-volume">Volume</label>
+                            <div>
+                                <input id="register-manga-volume" type="number" name="txtRegisterMangaVolume" required="required" placeholder="Manga volume" autocomplete="off">
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="register-manga-category">Category</label>
+                            <div>
+                                <input id="register-manga-category" type="text" name="txtMangaCategory" required="required" placeholder="manga category" autocomplete="off">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="register-section">
+                        <span>Purchase Information</span>
+                        <div class="form-group">
+                            <label for="register-manga-price">Price</label>
+                            <div>
+                                <input type="text" id="register-manga-price" name="txtRegisterMangaPrice" required="required" placeholder="manga price" autocomplete="off">
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="register-manga-quantity">Quantity</label>
+                            <div>
+                                <input id="register-manga-quantity" type="text" name="txtRegisterMangaQuantity" required="required" placeholder="manga quantity" autocomplete="off">
+                            </div>
+                        </div>
+    
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="orders" class="section">
+            <p class="orders-message">
+                Order content, option available soon!
+            </p>
+        </div>
+
     </main>
 
     <script src="../scripts/dashboard.js"></script>
