@@ -5,15 +5,15 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.header {
+header {
     display: flex;
-    flex-wrap: wrap;
     position: relative;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    background-color: #fff;
     padding: 10px 0;
+    background-color: #FFF;
 }
 
 .cart {
@@ -21,17 +21,11 @@ body {
     align-items: center;
 }
 
-.cart button {
+.cart a {
     display: flex;
-    border: none;
+    text-decoration: none;
     cursor: pointer;
-    background-color: inherit;
     transition: transform .5s ease-in-out;
-}
-
-.cart button:hover,
-.title-logo:hover {
-    transform: scale(1.2);
 }
 
 .cart img {
@@ -44,12 +38,25 @@ body {
     color: #246A73;
 }
 
+
 .title-logo {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     transition: transform .5s ease-in-out;
+}
+
+.cart a:hover,
+.title-logo:hover {
+    transform: scale(1.2);
+}
+
+.title-logo a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .title-logo img {
@@ -69,10 +76,7 @@ body {
     align-items: center;
 }
 
-.menu-icon {
-    display: none;
-}
-
+.menu-icon,
 #menu-toggle {
     display: none;
 }
@@ -115,16 +119,12 @@ body {
     min-width: 200px;
     top: 100%;
     left: -150px;
-    list-style-type: none;
-    padding: 0;
     margin: 0;
-    background-color: #fff;
+    padding: 0;
+    list-style: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+    background-color: #FFF;
     z-index: 2;
-}
-
-.submenu.show {
-    display: block;
 }
 
 .submenu li {
@@ -135,21 +135,20 @@ body {
     background-color: #246A73;
 }
 
-.submenu li a {
-    text-decoration: none;
-    color: #246A73;
+.submenu li:hover a {
+    color: #FFF;
 }
 
-.submenu li:hover a {
-    color: #fff;
+.submenu.show {
+    display: block;
 }
 
 .footer {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    background-color: #fff;
+    background-color: #FFF;
 }
 
 
@@ -169,71 +168,71 @@ body {
     color: #1E2D5E;
 }
 
+.social-media-container a {
+    display: inline-flex;
+    align-items: center;
+    margin: 5px;
+    color: #FFF;
+}
+
+.cuadrado {
+    width: 30px;
+    line-height: 30px;
+}
+
 .facebook img {
     width: 10px;
+}
+
+.social-media-container a span.titulo {
+    margin: 0 20px;
+    font-size: 1.1rem;
+    transition: all 200ms linear;
+}
+
+.social-media-container a:hover span.titulo {
+    color: #FFF;
 }
 
 .gplus img {
     width: 15px;
 }
 
-.contenedor-redes-sociales a {
-    display: inline-flex;
-    align-items: center;
-    color: #fff;
-    margin: 5px;
-}
-
-.contenedor-redes-sociales a span.cuadrado {
-    line-height: 30px;
-    width: 30px;
-}
-
-.contenedor-redes-sociales a span.titulo {
-    margin: 0 20px;
-    font-size: 1.1rem;
-    transition: all 200ms linear;
-}
-
-.contenedor-redes-sociales a:hover span.titulo {
-    color: #fff;
-}
-
-.contenedor-redes-sociales .facebook:hover,
-.contenedor-redes-sociales .gplus:hover {
+.social-media-container .facebook:hover,
+.social-media-container .gplus:hover {
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
-.contenedor-redes-sociales .facebook {
+.social-media-container .facebook {
     border: 2px solid #3B5998;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-.contenedor-redes-sociales .facebook:hover,
-.contenedor-redes-sociales .facebook span.cuadrado {
+.social-media-container .facebook:hover,
+.social-media-container .facebook span.cuadrado {
     background: #3B5998;
 }
 
-.contenedor-redes-sociales .facebook span.titulo {
+.social-media-container .facebook span.titulo {
     color: #3B5998;
 }
 
-.contenedor-redes-sociales .gplus {
+.social-media-container .gplus {
     border: 2px solid #D64136;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-.contenedor-redes-sociales .gplus:hover,
-.contenedor-redes-sociales .gplus span.cuadrado {
+.social-media-container .gplus:hover,
+.social-media-container .gplus span.cuadrado {
     background: #d64136;
 }
 
-.contenedor-redes-sociales .gplus span.titulo {
+.social-media-container .gplus span.titulo {
     color: #d64136;
 }
 
@@ -320,7 +319,7 @@ form button:hover {
         margin: 0px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
         padding: 4% 40% 4% 40%;
-        background-color: #fff;
+        background-color: #FFF;
     }
 
     .menu-icon {

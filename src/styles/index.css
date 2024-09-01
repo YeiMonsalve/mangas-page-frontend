@@ -24,6 +24,7 @@
 
 .container {
     position: relative;
+    box-sizing: border-box;
     width: 40vw;
     height: 45vh;
     margin: 15px;
@@ -47,46 +48,38 @@
     transition: .7s ease-in-out;
 }
 
-.text h3 {
-    color: #1E2D5E;
-    font-size: 2rem;
-
-}
-
-.right img {
-    position: absolute;
-    height: 100%;
-    width: 20px;
-    cursor: pointer;
-    z-index: 1;
-    transition: 1s;
-    right: 10px;
-    top: 0;
-}
-
+.right img,
 .left img {
     position: absolute;
     height: 100%;
     width: 20px;
-    cursor: pointer;
-    z-index: 1;
-    transition: 1s;
-    left: 10px;
     top: 0;
+    right: 10px;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 1;
+}
+
+.right img {
+    right: 10px;
+}
+
+.left img {
+    left: 10px;
 }
 
 .dot {
     position: absolute;
     width: 10px;
     height: 10px;
-    left: 50%;
-    transform: translateY(-50%);
     bottom: 10px;
+    left: 50%;
     border-radius: 50%;
     cursor: pointer;
+    background: #1E2D5E;
     z-index: 1;
     transition: .5s;
-    background: #1E2D5E;
+    transform: translateY(-50%);
 }
 
 .dot.a1 {
@@ -101,18 +94,16 @@
     margin-left: 20px;
 }
 
-.dot.a1:hover,
-.dot.a2:hover,
-.dot.a3:hover {
+.dot:hover {
     background: #86ADC7;
-}
+} 
 
 .images-decoration {
     display: flex;
     height: 45vh;
     align-items: center;
-    gap: 2vw;
     margin-left: 3vw;
+    gap: 2vw;
 }
 
 .images-decoration img {
@@ -142,8 +133,8 @@
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    font-size: 1.2rem;
     gap: 20px;
+    font-size: 1.2rem;
 }
 
 .manga-item {
@@ -154,6 +145,7 @@
 }
 
 .manga-item img {
+    height: 100%;
     width: 220px;
     margin-right: 20px;
     cursor: pointer;
@@ -166,6 +158,7 @@
 
 .manga-info {
     text-align: center;
+    padding: 10px;
     background-color: #A8BDCC7C;
 }
 
@@ -173,21 +166,25 @@
     margin: 0 20px;
 }
 
-.manga-item button {
-    font-size: 1.1rem;
+.manga-item .button {
+    display: flex;
+    width: 30%;
+    margin: 10px auto;
     padding: 7px;
-    margin: 20px;
+    justify-content: center;
     border: none;
     border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
     cursor: pointer;
     color: #fff;
     background-color: #6A93AA9F;
     transition: transform .5s ease-in-out;
 }
 
-.manga-item button:hover {
-    transform: scale(1.1);
+.manga-item .button:hover {
     background-color: #246A73;
+    transform: scale(1.1);
 }
 
 @media only screen and (max-width: 1050px) {
@@ -209,8 +206,8 @@
     }
 
     .container {
-        transform: skew(0);
         width: 95%;
+        transform: skew(0);
     }
 
     .text {
@@ -240,6 +237,7 @@
     }
 
     .manga-item img {
+        height: auto;
         margin: 20px 0 0 0;
     }
 
