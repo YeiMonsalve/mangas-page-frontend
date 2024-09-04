@@ -41,6 +41,7 @@ function searchManga() {
   const searchTerm = document.querySelector('#search-input').value.trim().toLowerCase();
   const categoriaSeleccionada = document.getElementById("category-select").value;
   const mangaItems = document.querySelectorAll('.manga-item');
+  let found = false;
 
   mangaItems.forEach(item => {
     const mangaTitle = item.querySelector('h2').innerText.trim().toLowerCase();
@@ -49,10 +50,18 @@ function searchManga() {
     if ((mangaTitle.includes(searchTerm) || searchTerm === "") &&
       (categoriaSeleccionada === "all" || categoriaManga === categoriaSeleccionada)) {
       item.classList.remove('hidden');
+      found = true;
     } else {
       item.classList.add('hidden');
     }
   });
+
+  const noResultsMessage = document.getElementById('no-results');
+  if (found) {
+    noResultsMessage.classList.add('hidden');
+  } else {
+    noResultsMessage.classList.remove('hidden');
+  }
 }
 
 document.querySelector('#search-input').addEventListener('keydown', (event) => {
