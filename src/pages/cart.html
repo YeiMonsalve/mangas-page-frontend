@@ -13,10 +13,10 @@
 <body translate="no">
     <header class="header">
         <div class="cart">
-            <button onclick="location.href='cart.html'">
-                <img src="../assets/icons/cartShopping.svg" alt="carrito de compras">
+            <a href="cart.html">
+                <img src="../assets/icons/cartShopping.svg" alt="Shopping cart icon">
                 <span id="cart-count" class="cart-count">0</span>
-            </button>
+            </a>
         </div>
 
         <div class="title-logo">
@@ -37,7 +37,6 @@
                         </a>
                         <ul class="submenu" id="submenu">
                             <li><a href="profile.html">Profile Settings</a></li>
-                            <li><a href="orderHistory.html">Order History</a></li>
                             <li><a href="signUp.html">Sign Up</a></li>
                             <li><a href="logIn.html">Log In</a></li>
                             <li><a href="#">Log Out</a></li>
@@ -72,47 +71,48 @@
 
     <footer class="footer">
         <div class="footer-content">
-
-            <div class="contact-me">
-                <p>Contact Us</p>
-                <div class="contenedor-redes-sociales">
-                    <a class="facebook" href="#">
-                        <span class="cuadrado">
-                            <img src="../assets/icons/facebook.svg" alt="facebook">
-                        </span>
-                        <span class="titulo">Facebook</span>
-                    </a>
-                    <a class="gplus" href="#">
-                        <span class="cuadrado">
-                            <img src="../assets/icons/e-mail.svg" alt="e-mail">
-                        </span>
-                        <span class="titulo">E-mail</span>
-                    </a>
-                </div>
+    
+          <div class="contact-me">
+            <p>Contact Us</p>
+            <div class="social-media-container">
+              <a class="facebook" href="#">
+                <span class="cuadrado">
+                  <img src="../assets/icons/facebook.svg" alt="facebook">
+                </span>
+                <span class="titulo">Facebook</span>
+              </a>
+              <a class="gplus" href="#">
+                <span class="cuadrado">
+                  <img src="../assets/icons/e-mail.svg" alt="e-mail">
+                </span>
+                <span class="titulo">E-mail</span>
+              </a>
             </div>
-
-            <div class="newsletter">
-                <h2>Sign up to receive emails</h2>
-                <p>Sign up to stay informed about all the news on the website!</p>
-      
-                <form action="mailto:tu_correo_electronico@gmail.com" method="post" enctype="text/plain">
-                  <input type="email" id="email" name="email" class="newsletter-input" placeholder="Email" autocomplete="email" required>
-                  <button type="submit">subscribe</button>
-                </form>
-              </div>
-
+          </div>
+    
+          <div class="newsletter">
+            <h2>Sign up to receive emails</h2>
+            <p>Sign up to stay informed about all the news on the website!</p>
+    
+            <form method="post">
+              <input type="email" id="email" name="email" class="newsletter-input" placeholder="Email" autocomplete="email"
+                required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+    
         </div>
-
+    
         <div class="footer-copy">
-            <p>Copyright &copy;Yarigai-MangaStore.
-                <a href="#">Terms of Use</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">cookies</a>
-                <a href="#">AdChoice</a>
-            </p>
+          <p>Copyright &copy;Yarigai-MangaStore.
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies</a>
+            <a href="#">AdChoice</a>
+          </p>
         </div>
-
-    </footer>
+    
+      </footer>
 
     <script src="../scripts/header_Menu_Submenu.js"></script>
 

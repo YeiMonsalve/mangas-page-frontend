@@ -1,4 +1,4 @@
-// Barra de navegación
+//barra de navegación
 const logo = document.getElementById("logo");
 const barraLateral = document.querySelector(".sidebar");
 const spans = document.querySelectorAll("span");
@@ -73,7 +73,7 @@ document.querySelectorAll('.list-item a, .submenu-item a').forEach(link => {
     });
 });
 
-showSection('register-mangas');
+showSection('home');
 
 // Filtrador/Buscador
 document.querySelectorAll('.searchButton').forEach(button => {

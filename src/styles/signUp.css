@@ -164,6 +164,11 @@ body {
 }
 
 @media only screen and (max-width: 380px) {
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+    
     .content {
         width: 90%;
     }

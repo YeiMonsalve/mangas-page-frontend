@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarigai-MangaStore</title>
+    <link rel="icon" href="../assets/logos/Yarigai.ico">
+    <link rel="stylesheet" href="../styles/profile.css">
+</head>
+
+<body translate="no">
+
+    <main>
+        <div class="profile-img">
+            <img id="profile-pic" class="profile-pic" src="../assets/logos/Yarigai.png" alt="Profile picture">
+            <input type="file" id="file-input" accept="image/*" title="profile-img" class="input-img">
+            <button id="upload-btn">Edit profile picture</button>
+        </div>
+        <form method="post">
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="first-name">Names</label>
+                    <div>
+                        <input type="text" id="first-name" name="txtNames" required="required" disabled placeholder="Names" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Names</label>
+                    <div>
+                        <input type="text" id="last-name" name="txtLastNames" required="required" disabled placeholder="Last names" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Phone Number">Phone Number</label>
+                    <div>
+                        <input id="Phone Number" type="number" name="txtPhoneNumber" required="required" disabled placeholder="Phone number" autocomplete="tel">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Address">Address</label>
+                    <div>
+                        <input id="Address" type="text" name="txtAddress" required="required" disabled placeholder="Address" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <div>
+                        <input id="Email" type="email" name="txtEmail" required="required" disabled placeholder="E-mail" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Username">Username</label>
+                    <div>
+                        <input id="Username" type="text" name="txtUser" required="required" disabled placeholder="User" autocomplete="off">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-buttons">
+                <button class="btn-primary" type="button" onclick="window.location.href='../../index.html'">Go to the homepage.</button>
+                <button type="button" name="btnRegister" class="btn-success" onclick="window.editUser.showModal();">Update information</button>
+            </div>
+        </form>
+    </main>
+
+    <dialog id="editUser">
+        <h2>Update Information</h2>
+        <form method="post">
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="edit-first-name">Names</label>
+                    <div>
+                        <input type="text" id="edit-first-name" name="txtEditNames" required="required" placeholder="Names" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-last-name">Last Names</label>
+                    <div>
+                        <input type="text" id="edit-last-name" name="txtEditLastNames" required="required" placeholder="Last names" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-Phone Number">Phone Number</label>
+                    <div>
+                        <input id="edit-Phone Number" type="number" name="txtEditPhoneNumber" required="required" placeholder="Phone number" autocomplete="tel">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-Address">Address</label>
+                    <div>
+                        <input id="edit-Address" type="text" name="txtEditAddress" required="required" placeholder="Address" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-Email">Email</label>
+                    <div>
+                        <input id="edit-Email" type="email" name="txtEditEmail" required="required" placeholder="E-mail" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-Username">Username</label>
+                    <div>
+                        <input id="edit-Username" type="text" name="txtEditUser" required="required" placeholder="User" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="password-container">
+                    <h2>Change Password.</h2>
+                    <div class="form-group">
+                        <label for="enter-Password">Password</label>
+                        <div>
+                            <input id="enter-Password" type="password" name="txtEnterPassword" required="required" placeholder="Enter your password" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="NewPassword">New password</label>
+                        <div>
+                            <input id="NewPassword" type="password" name="txtNewPassword" required="required" placeholder="Enter your new password" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+        <form method="dialog">
+            <div class="form-buttons">
+                <button class="close" onclick="window.editUser.close();">Cancel.</button>
+                <button type="submit" class="btn-success">Save Changes.</button>
+            </div>
+        </form>
+
+    </dialog>
+</body>
+<script src="../scripts/profile.js"></script>
+
+</html>

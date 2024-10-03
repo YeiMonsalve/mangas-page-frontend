@@ -3,8 +3,8 @@ main {
 }
 
 .cart-container {
-    box-sizing: border-box;
     width: 80%;
+    box-sizing: border-box;
     margin: 0 auto;
     padding: 20px;
     border-radius: 8px;

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 35px -2px rgba(42, 106, 105, 0.9);
+    object-fit: cover;
+}
+
+.profile-img button {
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #2A6A73;
+    transition: transform .5s ease-in-out;
+}
+
+.profile-img button:hover {
+    transform: scale(1.1);
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    margin: 50px 0;
+    gap: 20px; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2A6A73;
+}
+
+.form-group input {
+    display: flex;
+    width: 220px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.input-img {
+    display: none;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.form-buttons button{
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #2A6A73;
+    transition: transform .5s ease-in-out;
+}
+
+.form-buttons button:hover {
+    transform: scale(1.1);
+}
+
+dialog {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -4px -1px 46px 1px rgba(0, 0, 0, 1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+
+dialog::backdrop {
+    background: rgb(42, 106, 105);
+}
+
+dialog h2 {
+    text-align: center;
+    color: #2A6A73;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    margin: 0 auto;
+    gap: 10px;
+    align-items: center;
+}
+
+@media (max-width: 790px) {
+    .form-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 540px) {
+    dialog .form-container {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 485px) {
+    .form-container {
+        grid-template-columns: 1fr; 
+    }
+}

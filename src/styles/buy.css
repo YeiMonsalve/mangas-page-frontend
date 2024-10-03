@@ -8,9 +8,9 @@ body {
 
 .header {
     display: flex;
+    min-height: 12vh;
     justify-content: center;
     align-items: center;
-    min-height: 12vh;
 }
 
 .tittle-logo {
@@ -88,12 +88,11 @@ label {
     color: #555;
 }
 
-input[type="text"],
-input[type="number"],
+input,
 select,
 textarea {
-    box-sizing: border-box;
     width: 100%;
+    box-sizing: border-box;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
